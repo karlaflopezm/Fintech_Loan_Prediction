@@ -117,7 +117,7 @@ Traditional lenders are slowing down due to increased regulation, opening up opp
 
 Repo Schema Project4-Loan_Analysis/
 
-│ ├── 📁 data/ # Raw and cleaned data files
+│ ├── 📁 Resources/ # Raw and cleaned data files
 
 │ ├── loan_2018 - Loan data for 2018 only used in intial EDA
 
