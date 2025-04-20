@@ -1,0 +1,7 @@
+{
+  "host": "database-1.cd6smuu00g7x.us-east-2.rds.amazonaws.com",
+  "port": 5432,
+  "database": "postgres",
+  "user": "postgres",
+  "password": "postgres"
+}
