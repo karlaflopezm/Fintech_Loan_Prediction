@@ -47,7 +47,7 @@ Traditional lenders are slowing down due to increased regulation, opening up opp
 **Source**: Lending Club (via Kaggle)  
 https://www.kaggle.com/code/faressayah/lending-club-loan-defaulters-prediction
 **Sample size**: ~1 million personal loan records  
-**Features**: income, loan amount, DTI, employment status, loan purpose, loan grade, and more
+**Features**: income, loan amount, DTI, employment status, loan purpose, loan grade, and mor
 
 ---
 
@@ -170,6 +170,11 @@ Loan-Prediction/
   particularly in accurately classifying high-risk loans.
 
 ---
+## Challenge with Uploading Large Dataset
+
+We were unable to upload the CSV file directly to GitHub due to its large size.  
+You can download the dataset using the link below:
+https://drive.google.com/drive/folders/1KnrpDU1dHtPM2-nAvFlVZP6dVamjLTpq?usp=drive_link
 
 ## License
 
