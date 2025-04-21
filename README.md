@@ -101,7 +101,8 @@ To classify loans as either Low Risk (Grades A/B) or High Risk (Grades C–G), w
 - A multi-layer neural network was trained to capture complex, non-linear relationships.
 - Despite balancing the classes with SMOTE, the model achieved only ~52% accuracy.
 - The model overfitted to the majority class and failed to generalize, likely due to insufficient signal in the features or suboptimal architecture.
-![confusion Matrix](visual/sequential_report.png)
+![Confusion Matrix](./visual/sequential_report.png)
+
 
 **2. Perceptron**
 - Used as a simple linear baseline model.
