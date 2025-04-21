@@ -45,6 +45,7 @@ Traditional lenders are slowing down due to increased regulation, opening up opp
 ## Dataset
 
 **Source**: Lending Club (via Kaggle)  
+https://www.kaggle.com/code/faressayah/lending-club-loan-defaulters-prediction
 **Sample size**: ~1 million personal loan records  
 **Features**: income, loan amount, DTI, employment status, loan purpose, loan grade, and more
 
@@ -100,7 +101,8 @@ To classify loans as either Low Risk (Grades A/B) or High Risk (Grades C–G), w
 **1. Sequential Neural Network**
 - A multi-layer neural network was trained to capture complex, non-linear relationships.
 - Despite balancing the classes with SMOTE, the model achieved only ~52% accuracy.
-- The model overfitted to the majority class and failed to generalize, likely due to insufficient signal in the features or suboptimal architecture.
+- The model overfitted to the majority class and failed to generalize, likely due to insufficient signal in the features or
+- suboptimal architecture.
 ![Confusion Matrix](/Visual/sequential_report.png)
 
 
@@ -115,7 +117,7 @@ To classify loans as either Low Risk (Grades A/B) or High Risk (Grades C–G), w
 - Provided a strong linear benchmark after applying SMOTE to balance the classes.
 - Achieved ~71% accuracy, with well-balanced precision and recall (~0.71 F1-score).
 - Demonstrated reliable performance with fast training and interpretability.
- ![Confusion Matrix](Visual/logistic.png.png)
+ ![Confusion Matrix](Visual/logistic.png)
 
 **4. Random Forest with SMOTE and Hyperparameter Tuning**
 - The optimized Random Forest model achieved an accuracy of **73.9%** on the test set.  
@@ -136,43 +138,35 @@ To classify loans as either Low Risk (Grades A/B) or High Risk (Grades C–G), w
 - scikit-learn, xgboost, keras for machine learning and deep learning
 - imbalanced-learn for handling class imbalance with SMOTE
 - joblib and SQLAlchemy for model saving and database integration
+- psycopg2 to create direct connection with AWS
 - Gradio for interactive ML interface
-- Flask for lightweight backend deployment
 - PostgreSQL on AWS RDS for relational database storage
 - AWS for cloud hosting and database services
 
 ---
 
 ## Repository Structure
+Loan-Prediction/
+├── Resources/zip files, csv
+│── Visual   
+├── models 
+├── notebooks/
+│   ├── final/data_creating_colab.ipynb,
+|   └── All_other_model_attempts
+│   └── EDA_and_cleaning/cleaning.ipynb,EDA_Loan_Data_colab
+├── README.md
+├── db_config.json
+└── .gitignore
+└── Presentation
 
-Repo Schema Project4-Loan_Analysis/
-
-│ ├── 📁 Resources/ # Raw and cleaned data files
-
-│ ├── loan_2018 - Loan data for 2018 only used in intial EDA
-
-│ └── full_loan_data.csv - full set of data from Lending Club (US-based lending platform)
-
-| └── df_subset - subset of the full_loan_data.csv that was used for the analysis of potential models and the creation of the AWS cloud data set
-
-| └── LCDataDictionary - explains the columns/headers for the full_loan_data file
-
-│ ├── 📁 notebooks/ # Jupyter Notebooks (EDA, model training, etc.)
-
-| ├── EDA_Loan_Data.ipynb
-
-| └── data_cleaning
-
-| 📁 all_other_models/
-
-     └── A compilation of m compilation of multiple model attempts used to find the best combination of model type, hyperams, columns, etc. to arrive at the final model
 ---
 
 ## Next Steps (Future Work)
 
 - Use a larger dataset and advanced balancing techniques
-- Host full web app with Streamlit or Flask
 - Integrate real-time credit bureau API (e.g., Equifax) for live scoring
+- The final Random Forest model was integrated with a Gradio app for real-time prediction. While the interface works as expected, there are some performance limitations — 
+  particularly in accurately classifying high-risk loans.
 
 ---
 
