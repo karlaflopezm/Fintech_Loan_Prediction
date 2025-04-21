@@ -101,27 +101,27 @@ To classify loans as either Low Risk (Grades A/B) or High Risk (Grades C–G), w
 - A multi-layer neural network was trained to capture complex, non-linear relationships.
 - Despite balancing the classes with SMOTE, the model achieved only ~52% accuracy.
 - The model overfitted to the majority class and failed to generalize, likely due to insufficient signal in the features or suboptimal architecture.
-![Confusion Matrix](./visual/sequential_report.png)
+![Confusion Matrix](/Visual/sequential_report.png)
 
 
 **2. Perceptron**
 - Used as a simple linear baseline model.
 - Achieved ~59% accuracy with near-equal precision and recall for both classes.
 - While better than the neural network, it lacked the capacity to capture non-linear relationships or complex feature interactions.
-![Confusion Matrix](visual/Perceptron_report.png)
+![Confusion Matrix](Visual/Perceptron_report.png)
 
 
 **3. Logistic Regression**
 - Provided a strong linear benchmark after applying SMOTE to balance the classes.
 - Achieved ~71% accuracy, with well-balanced precision and recall (~0.71 F1-score).
 - Demonstrated reliable performance with fast training and interpretability.
- ![Confusion Matrix](visual/logistic.png.png)
+ ![Confusion Matrix](Visual/logistic.png.png)
 
 **4. Random Forest with SMOTE and Hyperparameter Tuning**
 - The optimized Random Forest model achieved an accuracy of **73.9%** on the test set.  
 - Both Low Risk and High Risk classes showed balanced precision and recall (F1-score ≈ 0.74).  
 - The model was trained using SMOTE for class balancing and tuned with RandomizedSearchCV for   improved generalization.
- ![Confusion Matrix](visual/tuned_random_forest.png)
+ ![Confusion Matrix](Visual/tuned_random_forest.png)
 
  **Conclusion**: Random Forest with with SMOTE and Hyperparameter Tuning is selected as the final model for deployment due to its superior performance, balanced metrics, and ability to model non-linear patterns in the data.
 
