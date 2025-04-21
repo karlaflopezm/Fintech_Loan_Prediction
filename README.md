@@ -81,7 +81,7 @@ https://www.kaggle.com/code/faressayah/lending-club-loan-defaulters-prediction
 - Target: `loan_grade_grouped`  
   (Low Risk = Grades A/B, High Risk = Grades C–G)
 - Split: 80/20 training/test
-- Best F1 Score: ~75%
+- Best Accuracy: ~74%
 - Metrics: Accuracy, Precision, Recall, F1, Confusion Matrix
 
 ### 6. Optimization & Class Imbalance Handling
